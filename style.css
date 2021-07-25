@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background:linear-gradient(rgba(0, 0, 0, 0.507),rgba(0, 0, 0, 0.507)), url('./img/daniel-schludi-mAGZNECMcUg-unsplash.jpg');
+    background-position: center;
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+}
+
+.container{
+    margin-top: 80px;
+}
+
+.myBtn{
+    margin: auto;
+    width: 100%;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.myBtn-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+}
+.myBtn-2 a{
+    display:none;
+    text-transform: uppercase;
+    background-color: green;
+    text-align: center;
+    border: 1px wheat solid;
+    align-items: center;
+}
+.vaccine-btn{
+    color: whitesmoke;
+    padding: 6px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.myAlert{
+    position: absolute;
+    top: 0%;
+    width: 100%;
+}
+.alert
+{   
+    z-index: 9;
+    display: block;
+    transition:all 0.5s ease-in-out;
+    top: -70px;
+}
+label{
+    color: white;
+}
+
+/* ################################## */
+
+.map{
+    z-index: 9;
+    width: 100%;
+    height: 500px;
+    margin: 20px 0;
+}
