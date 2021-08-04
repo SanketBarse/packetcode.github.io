@@ -1,9 +1,8 @@
 let pin = document.getElementById('pincode');
 let userdate = document.getElementById('date');
-
 let btn = document.getElementById('btn')
+
 btn.addEventListener('click', function (e) {
-    e.preventDefault();
 
     let pincode = pin.value;
     let user = userdate.value;
@@ -17,8 +16,7 @@ btn.addEventListener('click', function (e) {
             let json = JSON.parse(this.responseText);
             {
                 if (json.centers.length > 0) {
-                
-                    for (j in json) {
+                    for(j in json){
                         for (let i = 0; i < json[j].length; i++) {
                             document.getElementById('cowin-1').innerHTML +=
                                 `<tr>
@@ -32,45 +30,24 @@ btn.addEventListener('click', function (e) {
                                     <td>${json.centers[i].fee_type}</td>
                                 </tr>`
 
-                            let longit = json.centers[i].long;
-                            let latit = json.centers[i].lat;
-                            console.log( "first" ,longit)
-                            console.log("first" , latit)
-                            
-                            new mapboxgl.Marker()
-                                .setLngLat([longit, latit])
-                                .addTo(map);
+    
 
+                            document.getElementById('vaccineBtn').style.display = "block"
                         }
                     }
-                    document.getElementById('vaccineBtn').style.display = "block"
-                    function success(pos) {
-                        var crd = pos.coords;
-
-                        new mapboxgl.Marker()
-                                .setLngLat([crd.longitude, crd.latitude])
-                                .addTo(map);
-                      
-                        console.log('Your current position is:');
-                        console.log(`Longitude: ${crd.longitude}`);
-                        console.log(`Latitude : ${crd.latitude}`);
-                        console.log(`More or less ${crd.accuracy} meters.`);
-                    }
-                    navigator.geolocation.getCurrentPosition(success)
-
 
                 }
                 else {
 
                     let alertclass = document.getElementsByClassName('alertclass')[0];
-                    alertclass.style.top = "0px"
+                    alertclass.style.top = "50px"
                     setTimeout(function () {
-                        alertclass.style.top = "-70px"
+                        alertclass.style.top = "-1px"
                     }, 4000);
                 }
             }
         }
-        else if (this.status == 300 || this.status == 400 || this.status == 500) {
+        if(this.status == 300 || this.status == 400 || this.status == 500) {
             alert("Something is missing ! ")
         }
 

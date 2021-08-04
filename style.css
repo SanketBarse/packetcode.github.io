@@ -50,17 +50,13 @@ body{
     z-index: 9;
     display: block;
     transition:all 0.5s ease-in-out;
-    top: -70px;
+    top: -1px;
 }
 label{
     color: white;
 }
 
 /* ################################## */
-
-.map{
-    z-index: 9;
-    width: 100%;
-    height: 500px;
-    margin: 20px 0;
+.navbar{
+    z-index: 99;
 }
