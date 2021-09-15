@@ -1,5 +1,5 @@
 
-## CHECK VACCINE AVAILABILITIES NEAR YOU
+## CHECK VACCINE AVAILABLITIES NEAR YOU
 
 ### About Project
 
@@ -12,4 +12,3 @@ only.
 * CSS
 * Bootsrap
 * JavaScript
-I

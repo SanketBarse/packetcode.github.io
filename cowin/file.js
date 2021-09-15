@@ -16,7 +16,7 @@ btn.addEventListener('click', function (e) {
             let json = JSON.parse(this.responseText);
             {
                 if (json.centers.length > 0) {
-                    for(j in json){
+                    for (j in json) {
                         for (let i = 0; i < json[j].length; i++) {
                             document.getElementById('cowin-1').innerHTML +=
                                 `<tr>
@@ -30,7 +30,7 @@ btn.addEventListener('click', function (e) {
                                     <td>${json.centers[i].fee_type}</td>
                                 </tr>`
 
-    
+
 
                             document.getElementById('vaccineBtn').style.display = "block"
                         }
@@ -47,7 +47,7 @@ btn.addEventListener('click', function (e) {
                 }
             }
         }
-        if(this.status == 300 || this.status == 400 || this.status == 500) {
+        if (this.status == 300 || this.status == 400 || this.status == 500) {
             alert("Something is missing ! ")
         }
 
